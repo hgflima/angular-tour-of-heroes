@@ -1,5 +1,6 @@
-import {HeroesComponent} from "./heroes.component";
-import {DashboardComponent} from "./dashboard.component";
+import {HeroesComponent}      from "./heroes.component";
+import {DashboardComponent}   from "./dashboard.component";
+import {HeroDetailComponent}  from "./hero-detail.component";
 
 export const ROUTES = [
 
@@ -15,6 +16,10 @@ export const ROUTES = [
   {
     path: 'dashboard',
     component: DashboardComponent
+  },
+  {
+    path: 'detail/:id',
+    component: HeroDetailComponent
   }
 
 ]
