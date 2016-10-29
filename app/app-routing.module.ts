@@ -1,9 +1,11 @@
-import {HeroesComponent}      from "./heroes.component";
-import {DashboardComponent}   from "./dashboard.component";
-import {HeroDetailComponent}  from "./hero-detail.component";
-import {Routes}               from "@angular/router";
+import {Routes, RouterModule} from "@angular/router";
+import {NgModule}             from "@angular/core";
 
-export const ROUTES: Routes = [
+import {DashboardComponent}   from "./dashboard.component";
+import {HeroesComponent}      from "./heroes.component";
+import {HeroDetailComponent}  from "./hero-detail.component";
+
+const routes: Routes = [
 
   {
     path: '',
@@ -24,3 +26,10 @@ export const ROUTES: Routes = [
   }
 
 ]
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule { }
